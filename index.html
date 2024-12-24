@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF文档处理</title>
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="pdf-converter">
+        <!-- 快捷操作区域 -->
+        <div class="quick-actions">
+            <div class="action-grid">
+                <!-- 打开PDF -->
+                <div class="action-card">
+                    <div class="icon-wrapper">
+                        <i class="mdi mdi-plus"></i>
+                    </div>
+                    <span class="action-title">打开PDF</span>
+                </div>
+
+                <!-- PDF转Office -->
+                <div class="action-card">
+                    <div class="icon-wrapper red-theme">
+                        <i class="mdi mdi-file-word"></i>
+                    </div>
+                    <span class="action-title">PDF转Office</span>
+                </div>
+
+                <!-- 图片转PDF -->
+                <div class="action-card">
+                    <div class="icon-wrapper purple-theme">
+                        <i class="mdi mdi-image-multiple"></i>
+                    </div>
+                    <span class="action-title">图片转PDF</span>
+                </div>
+
+                <!-- PDF转图片 -->
+                <div class="action-card">
+                    <div class="icon-wrapper blue-theme">
+                        <i class="mdi mdi-image"></i>
+                    </div>
+                    <span class="action-title">PDF转图片</span>
+                </div>
+
+                <!-- PDF拆分 -->
+                <div class="action-card">
+                    <div class="icon-wrapper indigo-theme">
+                        <i class="mdi mdi-file-document-multiple-outline"></i>
+                    </div>
+                    <span class="action-title">PDF拆分</span>
+                </div>
+
+                <!-- PDF压缩 -->
+                <div class="action-card">
+                    <div class="icon-wrapper red-theme">
+                        <i class="mdi mdi-zip-box"></i>
+                    </div>
+                    <span class="action-title">PDF压缩</span>
+                    <span class="upgrade-badge">新功能升级</span>
+                </div>
+            </div>
+
+            <!-- 添加新的功能区域 -->
+            <div class="features-container">
+                <!-- 左侧最近打开文件区域 -->
+                <div class="recent-files">
+                    <div class="recent-files-header">
+                        <h2 class="section-title">最近打开文件</h2>
+                        <span class="clear-all">清空列表</span>
+                    </div>
+                    <div class="file-list">
+                        <!-- 空状态 -->
+                        <div class="empty-state">
+                            <i class="mdi mdi-cloud-upload-outline"></i>
+                            <p>点击或拖拽文件至此区域，打开PDF文件</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧功能区 -->
+                <div class="features-section">
+                    <!-- PDF转换部分 -->
+                    <div class="feature-group">
+                        <h2 class="section-title">PDF转换</h2>
+                        <div class="feature-cards">
+                            <!-- PDF转Office -->
+                            <div class="feature-card">
+                                <div class="feature-icon orange">
+                                    <i class="mdi mdi-file-word"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>PDF转Office</h3>
+                                    <p>PDF转Word、Excel、PPT</p>
+                                </div>
+                            </div>
+
+                            <!-- PDF转图片 -->
+                            <div class="feature-card">
+                                <div class="feature-icon blue">
+                                    <i class="mdi mdi-image"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>PDF转图片</h3>
+                                    <p>一键将PDF转为图片文件</p>
+                                </div>
+                            </div>
+
+                            <!-- 图片转PDF -->
+                            <div class="feature-card">
+                                <div class="feature-icon light-blue">
+                                    <i class="mdi mdi-image-multiple"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>图片转PDF</h3>
+                                    <p>一键将图片转为PDF文件</p>
+                                </div>
+                            </div>
+
+                            <!-- 其他转PDF -->
+                            <div class="feature-card">
+                                <div class="feature-icon pink">
+                                    <i class="mdi mdi-file-pdf-box"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>其他转PDF</h3>
+                                    <p>Word、Excel、PPT转PDF</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PDF处理部分 -->
+                    <div class="feature-group">
+                        <h2 class="section-title">PDF处理</h2>
+                        <div class="feature-cards">
+                            <!-- PDF合并 -->
+                            <div class="feature-card">
+                                <div class="feature-icon purple">
+                                    <i class="mdi mdi-file-multiple"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>PDF合并</h3>
+                                    <p>多个PDF合并成一个PDF</p>
+                                </div>
+                            </div>
+
+                            <!-- PDF压缩 -->
+                            <div class="feature-card">
+                                <div class="feature-icon red">
+                                    <i class="mdi mdi-zip-box"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>PDF压缩</h3>
+                                    <p>快速压缩PDF文件大小</p>
+                                </div>
+                            </div>
+
+                            <!-- PDF拆分 -->
+                            <div class="feature-card">
+                                <div class="feature-icon indigo">
+                                    <i class="mdi mdi-file-document-multiple-outline"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>PDF拆分</h3>
+                                    <p>一个PDF拆分为多个PDF</p>
+                                </div>
+                            </div>
+
+                            <!-- PDF水印 -->
+                            <div class="feature-card">
+                                <div class="feature-icon cyan">
+                                    <i class="mdi mdi-stamper"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h3>PDF水印</h3>
+                                    <p>添加、删除PDF水印</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PDF综合应用部分 -->
+        <div class="feature-group">
+            <h2 class="section-title">PDF综合应用</h2>
+            <div class="feature-cards">
+                <!-- PDF加密 -->
+                <div class="feature-card">
+                    <div class="feature-icon pink">
+                        <i class="mdi mdi-lock"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>PDF加密</h3>
+                        <p>设置PDF打开和使用密码</p>
+                    </div>
+                </div>
+
+                <!-- PDF页面页码 -->
+                <div class="feature-card">
+                    <div class="feature-icon cyan">
+                        <i class="mdi mdi-format-list-numbered"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>PDF页面页码</h3>
+                        <p>设置文档中的页码</p>
+                    </div>
+                </div>
+
+                <!-- PDF页面重排 -->
+                <div class="feature-card">
+                    <div class="feature-icon indigo">
+                        <i class="mdi mdi-sort"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>PDF页面重排</h3>
+                        <p>调整PDF文档中的页面顺序</p>
+                    </div>
+                </div>
+
+                <!-- 打开PDF -->
+                <div class="feature-card">
+                    <div class="feature-icon purple">
+                        <i class="mdi mdi-book-open-variant"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>打开PDF</h3>
+                        <p>注释、提取文字等功能</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PDF页面管理部分 -->
+        <div class="feature-group">
+            <h2 class="section-title">PDF页面管理</h2>
+            <div class="feature-cards">
+                <!-- PDF提取页面 -->
+                <div class="feature-card">
+                    <div class="feature-icon orange">
+                        <i class="mdi mdi-file-export"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>PDF提取页面</h3>
+                        <p>选择页面生成新的PDF</p>
+                    </div>
+                </div>
+
+                <!-- PDF替换页面 -->
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <i class="mdi mdi-file-replace"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>PDF替换页面</h3>
+                        <p>使用其他PDF页面替换</p>
+                    </div>
+                </div>
+
+                <!-- PDF插入页面 -->
+                <div class="feature-card">
+                    <div class="feature-icon purple">
+                        <i class="mdi mdi-file-plus"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>PDF插入页面</h3>
+                        <p>在PDF中插入指定页面</p>
+                    </div>
+                </div>
+
+                <!-- PDF删除页面 -->
+                <div class="feature-card">
+                    <div class="feature-icon red">
+                        <i class="mdi mdi-file-remove"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h3>PDF删除页面</h3>
+                        <p>在PDF中删除指定页面</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 在pdf-converter div的最后添加 -->
+        <div class="copyright">
+            <p>© 2024 Jasone. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">关于我们</a>
+                <span class="divider">|</span>
+                <a href="#" class="footer-link">使用条款</a>
+                <span class="divider">|</span>
+                <a href="#" class="footer-link">隐私政策</a>
+                <span class="divider">|</span>
+                <a href="#" class="footer-link">帮助中心</a>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="mdi mdi-github"></i></a>
+                <a href="#" class="social-link"><i class="mdi mdi-twitter"></i></a>
+                <a href="#" class="social-link"><i class="mdi mdi-email"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

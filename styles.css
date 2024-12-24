@@ -1,0 +1,533 @@
+/* 主容器布局 */
+.pdf-converter {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 快捷操作区域 */
+.quick-actions {
+    padding: 30px 0;
+    width: 1052px;
+    margin: 0 auto;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 152px);
+    gap: 20px;
+    padding: 0;
+    justify-content: flex-start;
+    margin-left: 0;
+}
+
+.action-grid-wrapper {
+    width: 1052px;
+    padding-left: 0;
+    box-sizing: border-box;
+}
+
+.action-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px;
+    width: 152px;
+    background: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+.icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    background: #f5f7fa;
+}
+
+.icon-wrapper i {
+    font-size: 24px;
+    color: #666;
+}
+
+.action-title {
+    font-size: 14px;
+    color: #333;
+    margin-top: 8px;
+}
+
+.upgrade-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: linear-gradient(135deg, #ff4757, #ff6b81);
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+/* 功能区容器 */
+.features-container {
+    width: 1052px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    padding: 0;
+    gap: 30px;
+    height: 490px;
+}
+
+/* 功能区布局 */
+.features-section {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+    margin-right: 38px;
+}
+
+.features-section .feature-group {
+    margin: 0;
+    padding: 0;
+    width: 496px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+}
+
+/* 所有标题的通用样式 */
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    padding: 0 0 0 12px;
+    height: 25px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+/* 左侧装饰线 */
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 14px;
+    background: #e0e0e0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* 底部装饰线 */
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 12px;
+    bottom: 2px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    transition: width 0.3s ease;
+    opacity: 0;
+}
+
+/* Hover效果 */
+.section-title:hover {
+    color: #4facfe;
+}
+
+.section-title:hover::before {
+    height: 20px;
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+}
+
+.section-title:hover::after {
+    width: calc(100% - 24px);
+    opacity: 1;
+}
+
+/* 特殊位置标题的调整 */
+.pdf-converter > .feature-group .section-title {
+    padding-left: 12px;
+    margin-left: 15px;
+}
+
+/* 最近文件标题调整 */
+.recent-files .section-title {
+    padding-left: 12px;
+    margin-bottom: 16px;
+}
+
+.features-section .feature-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 238px);
+    gap: 20px;
+    justify-content: flex-start;
+    margin: 16px 0 0 0;
+    padding: 0;
+}
+
+/* 功能卡片样式 */
+.feature-card {
+    width: 238px;
+    height: 82px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.feature-icon i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.feature-text {
+    flex: 1;
+    max-width: calc(238px - 48px - 32px);
+}
+
+.feature-text h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 4px 0;
+}
+
+.feature-text p {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+/* 图标主题颜色 */
+.icon-wrapper.red-theme {
+    background: linear-gradient(135deg, #ff4757, #ff6b81);
+}
+
+.icon-wrapper.purple-theme {
+    background: linear-gradient(135deg, #9f7aea, #b794f4);
+}
+
+.icon-wrapper.blue-theme {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.icon-wrapper.indigo-theme {
+    background: linear-gradient(135deg, #6366f1, #818cf8);
+}
+
+.feature-icon.orange {
+    background: linear-gradient(135deg, #ff6b6b, #ffa502);
+}
+
+.feature-icon.blue {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.feature-icon.purple {
+    background: linear-gradient(135deg, #9f7aea, #b794f4);
+}
+
+.feature-icon.red {
+    background: linear-gradient(135deg, #ff4757, #ff6b81);
+}
+
+.feature-icon.light-blue {
+    background: linear-gradient(135deg, #00c6fb, #005bea);
+}
+
+.feature-icon.pink {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+.feature-icon.indigo {
+    background: linear-gradient(135deg, #6366f1, #818cf8);
+}
+
+.feature-icon.cyan {
+    background: linear-gradient(135deg, #06b6d4, #22d3ee);
+}
+
+/* 主题色图标颜色 */
+.icon-wrapper.red-theme i,
+.icon-wrapper.purple-theme i,
+.icon-wrapper.blue-theme i,
+.icon-wrapper.indigo-theme i {
+    color: #fff;
+}
+
+/* PDF综合应用和页面管理特殊布局 */
+.pdf-converter > .feature-group {
+    width: 1052px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pdf-converter > .feature-group .section-title {
+    padding-left: 12px;
+    margin-left: 15px;
+}
+
+.pdf-converter > .feature-group .feature-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+    justify-content: flex-start;
+    width: 1052px;
+    margin: 0 auto;
+    padding-left: 0;
+}
+
+/* 美化滚动条 */
+.pdf-converter > .feature-group .feature-cards::-webkit-scrollbar {
+    height: 6px;
+}
+
+.pdf-converter > .feature-group .feature-cards::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.pdf-converter > .feature-group .feature-cards::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.pdf-converter > .feature-group .feature-cards::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+/* 响应式布局 */
+@media (max-width: 1024px) {
+    .action-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .action-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 左侧最近文件区域 */
+.recent-files {
+    width: 480px;
+    margin-right: 0;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.recent-files-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.clear-all {
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+}
+
+.file-list {
+    min-height: 200px;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-item:hover {
+    background: #f5f7fa;
+}
+
+.file-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.file-icon i {
+    font-size: 24px;
+    color: #666;
+}
+
+.file-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.file-name {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-time {
+    font-size: 12px;
+    color: #999;
+}
+
+.file-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    background: #eee;
+    color: #333;
+}
+
+/* 空态式 */
+.empty-state {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    padding: 20px;
+    background: #f9fafb;
+    border-radius: 8px;
+    border: 2px dashed #e5e7eb;
+}
+
+.empty-state i {
+    font-size: 48px;
+    margin-bottom: 12px;
+    color: #a3aab8;
+    background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.8;
+}
+
+.empty-state p {
+    font-size: 14px;
+    text-align: center;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* 添加页面背景色 */
+body {
+    background: #f5f7fa;  /* 浅灰蓝色背景 */
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* 调整卡片的阴影效果，使其在浅灰背景上更突出 */
+.action-card, .feature-card, .recent-files {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 悬停效果增强 */
+.action-card:hover, .feature-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* 调整feature-group的宽度 */
+.pdf-converter > .feature-group {
+    width: 1052px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* 调整feature-group之间的间距 */
+.features-section .feature-group + .feature-group {  /* 选择相邻的feature-group */
+    margin-top: 40px;  /* 增加上边距 */
+}
+
+/* 或者直接给第一个feature-group加样式 */
+.features-section .feature-group:nth-child(2) {
+    margin-top: 40px;  /* 增加上边距 */
+}
