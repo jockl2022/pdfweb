@@ -531,3 +531,487 @@ body {
 .features-section .feature-group:nth-child(2) {
     margin-top: 40px;  /* 增加上边距 */
 }
+
+/* 在文件末尾添加响应式布局代码 */
+@media screen and (max-width: 1200px) {
+    .pdf-converter {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .quick-actions,
+    .features-container,
+    .pdf-converter > .feature-group {
+        width: 100%;
+        max-width: 1052px;
+    }
+
+    .action-grid {
+        grid-template-columns: repeat(auto-fit, minmax(152px, 1fr));
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .features-container {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+    }
+
+    .recent-files,
+    .features-section {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .features-section .feature-group {
+        width: 100%;
+    }
+
+    .features-section .feature-cards {
+        grid-template-columns: repeat(auto-fit, minmax(238px, 1fr));
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pdf-converter {
+        padding: 15px;
+    }
+
+    /* 修改快捷操作区域布局为两列 */
+    .action-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    /* 增大操作卡片尺寸 */
+    .action-card {
+        width: 100%;
+        padding: 16px;
+        height: auto;
+        display: flex;
+        flex-direction: row;  /* 改为横向布局 */
+        align-items: center;
+        gap: 12px;
+    }
+
+    /* 增大图标尺寸 */
+    .icon-wrapper {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 0;  /* 横向布局不需要底部间距 */
+    }
+
+    .icon-wrapper i {
+        font-size: 24px;  /* 增大图标尺寸 */
+    }
+
+    /* 调整文字大小和样式 */
+    .action-title {
+        font-size: 14px;
+        margin-top: 0;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    /* 调整升级标签位置 */
+    .upgrade-badge {
+        top: -8px;
+        right: -8px;
+        font-size: 12px;
+        padding: 2px 8px;
+    }
+
+    .features-container {
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .feature-card {
+        width: 100%;
+        height: 70px;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .feature-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .feature-icon i {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    .features-section .feature-cards {
+        gap: 10px;
+        margin-top: 8px;
+    }
+
+    /* 调整页面间距 */
+    .pdf-converter > .feature-group {
+        margin-top: 15px;
+    }
+
+    .features-section .feature-group + .feature-group {
+        margin-top: 15px;
+    }
+
+    /* 优化底部版权区域 */
+    .copyright {
+        margin-top: 15px;
+        padding: 10px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .footer-link {
+        font-size: 12px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    /* 优化底部功能区域布局 */
+    .pdf-converter > .feature-group {
+        width: 100%;
+        margin: 10px 0;
+        padding: 0 8px;
+    }
+
+    .pdf-converter > .feature-group .feature-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        overflow-x: visible;
+        padding: 0;
+    }
+
+    /* 调整功能卡片样式 */
+    .pdf-converter > .feature-group .feature-card {
+        width: 100%;
+        height: 60px;
+        padding: 10px;
+        gap: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pdf-converter {
+        padding: 12px;
+    }
+
+    .action-grid {
+        gap: 12px;
+        padding: 0 8px;
+    }
+
+    .action-card {
+        padding: 14px;
+    }
+
+    .icon-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-wrapper i {
+        font-size: 22px;
+    }
+
+    .action-title {
+        font-size: 13px;
+    }
+
+    /* 调整功能卡片布局 */
+    .features-section .feature-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .feature-card {
+        height: 64px;
+        padding: 12px;
+    }
+
+    /* 调整最近文件区域 */
+    .recent-files {
+        padding: 15px;
+    }
+
+    .empty-state {
+        height: auto;
+        padding: 20px 15px;
+    }
+
+    .empty-state i {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .empty-state p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    /* 调整升级标签 */
+    .upgrade-badge {
+        font-size: 10px;
+        padding: 1px 6px;
+        top: -6px;
+        right: -6px;
+    }
+
+    /* 进一步优化底部功能区域 */
+    .pdf-converter > .feature-group {
+        padding: 0 6px;
+        margin: 8px 0;
+    }
+
+    .pdf-converter > .feature-group .feature-cards {
+        grid-template-columns: 1fr;  /* 改为单列布局 */
+        gap: 8px;
+    }
+
+    .pdf-converter > .feature-group .feature-card {
+        height: 48px;
+        padding: 8px;
+    }
+
+    /* 隐藏功能卡片描述文字 */
+    .pdf-converter > .feature-group .feature-text p {
+        display: none;
+    }
+
+    .pdf-converter > .feature-group .feature-text h3 {
+        font-size: 13px;
+        margin: 0;
+    }
+}
+
+/* 添加新的超小幕断点 */
+@media screen and (max-width: 360px) {
+    .pdf-converter {
+        padding: 10px;
+    }
+
+    .action-grid {
+        gap: 10px;
+        padding: 0 5px;
+    }
+
+    .action-card {
+        padding: 12px;
+    }
+
+    .icon-wrapper {
+        width: 36px;
+        height: 36px;
+    }
+
+    .icon-wrapper i {
+        font-size: 12px;
+    }
+
+    .action-title {
+        font-size: 11px;
+    }
+
+    .feature-card {
+        height: 56px;
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .feature-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .feature-text h3 {
+        font-size: 12px;
+    }
+
+    .feature-text p {
+        font-size: 9px;
+    }
+
+    /* 超小屏幕底部功能区域优化 */
+    .pdf-converter > .feature-group {
+        padding: 0 4px;
+        margin: 6px 0;
+    }
+
+    .pdf-converter > .feature-group .feature-card {
+        height: 40px;
+        padding: 6px;
+        gap: 6px;
+    }
+
+    .pdf-converter > .feature-group .feature-text h3 {
+        font-size: 12px;
+    }
+
+    .pdf-converter > .feature-group .feature-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* 添加平滑过渡效果 */
+.pdf-converter,
+.quick-actions,
+.features-container,
+.action-grid,
+.feature-cards,
+.action-card,
+.feature-card {
+    transition: all 0.3s ease-in-out;
+}
+
+/* SVG 图标基础样式 */
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* 图标容器样式 */
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 主题色图标样式 */
+.icon-wrapper.red-theme .icon {
+    color: #fff;
+}
+
+.icon-wrapper.purple-theme .icon {
+    color: #fff;
+}
+
+.icon-wrapper.blue-theme .icon {
+    color: #fff;
+}
+
+.icon-wrapper.indigo-theme .icon {
+    color: #fff;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+    .icon {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* 添加新的断点处理超窄屏幕 */
+@media screen and (max-width: 320px) {
+    .pdf-converter > .feature-group .feature-cards {
+        gap: 4px;
+    }
+
+    .pdf-converter > .feature-group .feature-card {
+        height: 36px;
+        padding: 4px;
+    }
+
+    .pdf-converter > .feature-group .feature-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .pdf-converter > .feature-group .feature-text h3 {
+        font-size: 11px;
+    }
+}
+
+/* 处理较小高度的屏幕 */
+@media screen and (max-height: 600px) {
+    .pdf-converter > .feature-group {
+        margin: 6px 0;
+    }
+
+    .pdf-converter > .feature-group .feature-card {
+        height: 40px;
+    }
+
+    /* 隐藏所有描述文字 */
+    .feature-text p {
+        display: none;
+    }
+
+    /* 减小标题间距 */
+    .section-title {
+        margin-bottom: 4px;
+    }
+}
+
+/* 底部版权区域基础样式 */
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+    font-size: 12px;
+    color: #666;
+}
+
+@media screen and (max-width: 768px) {
+    .copyright {
+        padding: 6px;
+        font-size: 11px;
+    }
+
+    /* 隐藏不必要的链接 */
+    .footer-links,
+    .social-links {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .copyright {
+        padding: 4px;
+        font-size: 10px;
+    }
+}
+
+/* 处理较小高度的屏幕 */
+@media screen and (max-height: 600px) {
+    .copyright {
+        position: relative;
+        padding: 4px;
+        margin-top: 4px;
+    }
+
+    .copyright p {
+        font-size: 10px;
+        line-height: 1;
+    }
+}
